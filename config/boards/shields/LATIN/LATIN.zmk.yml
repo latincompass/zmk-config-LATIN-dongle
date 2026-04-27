@@ -1,0 +1,11 @@
+file_format: "1"
+id: LATIN
+name: LATIN
+type: shield
+url: https://github.com
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+# 移除分体关联配置，强制单端模式
+# siblings:
+#  - LATIN
