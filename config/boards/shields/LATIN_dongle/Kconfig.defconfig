@@ -3,19 +3,18 @@ if SHIELD_LATIN_DONGLE
 config ZMK_KEYBOARD_NAME
     default "LATIN-Dongle"
 
-config ZMK_SPLIT_ROLE_CENTRAL
+# 接收器 = 主机（连接收键盘）
+config ZMK_BLE_CENTRAL
     default y
 
+# 完全关闭分体（重要！）
 config ZMK_SPLIT
-    default y
-
-config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
-    default 1
+    default n
 
 config BT_MAX_CONN
-    default 6
+    default 2
 
 config BT_MAX_PAIRED
-    default 6
+    default 2
 
 endif
