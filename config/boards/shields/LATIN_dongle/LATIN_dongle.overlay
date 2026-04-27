@@ -2,6 +2,15 @@
 
 / {
 	chosen {
-		// 什么都不写！接收器不需要键盘扫描！
+		zmk,matrix_transform = &dummy_transform;
+	};
+
+	dummy_transform: keymap_transform_0 {
+		compatible = "zmk,matrix-transform";
+		columns = <1>;
+		rows = <1>;
+		map = <
+			RC(0,0)
+		>;
 	};
 };
