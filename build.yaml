@@ -1,12 +1,12 @@
 include:
-  # 接收器固件
+  # 接收器固件（插电脑）
   - board: seeeduino_xiao_ble
     shield: LATIN_dongle
 
-  # 键盘固件（强制变成外设，连接收器）
+  # 单键盘固件（连接收器）
   - board: seeeduino_xiao_ble
     shield: LATIN
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    cmake-args: -DCONFIG_ZMK_SPLIT=n -DCONFIG_ZMK_BLE_PERIPHERAL=y
 
   # 重置用（可选）
   - board: seeeduino_xiao_ble
