@@ -6,10 +6,12 @@
 		zmk,matrix_transform = &default_transform;
 	};
 
+	// 官方标准 mock kscan，无任何多余参数
 	mock_kscan: mock_kscan_0 {
 		compatible = "zmk,kscan-mock";
 	};
 
+	// 100% 照搬你的 LATIN.dtsi 矩阵
 	default_transform: keymap_transform_0 {
 		compatible = "zmk,matrix-transform";
 		columns = <5>;
