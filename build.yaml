@@ -1,4 +1,13 @@
 include:
+  # 接收器固件
+  - board: seeeduino_xiao_ble
+    shield: LATIN_dongle
+
+  # 键盘固件（强制变成外设，连接收器）
   - board: seeeduino_xiao_ble
     shield: LATIN
-# there is no settingsreset (needed) for the XIAO
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+
+  # 重置用（可选）
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
