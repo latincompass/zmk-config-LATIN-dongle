@@ -1,0 +1,6 @@
+.west
+build
+build-zmk-config-LATIN
+modules
+zephyr
+zmk
