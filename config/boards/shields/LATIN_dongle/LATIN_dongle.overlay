@@ -1,26 +1,15 @@
-// 🔴 旧：matrix-transform.h  🔴 错误
-// 🟢 新：matrix_transform.h  🟢 正确（下划线）
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
 	chosen {
 		zmk,kscan = &mock_kscan;
-		// 🔴 旧：zmk,matrix-transform  🔴 错误
-		// 🟢 新：zmk,matrix_transform  🟢 正确
 		zmk,matrix_transform = &default_transform;
 	};
 
-	// 接收器虚拟按键扫描（官方标准）
 	mock_kscan: mock_kscan_0 {
 		compatible = "zmk,kscan-mock";
-		columns = <0>;
-		rows = <0>;
-		events = <0>;
 	};
 
-	// ==========================================
-	// 🟢【100% 照搬你自己的 LATIN.dtsi 矩阵】
-	// ==========================================
 	default_transform: keymap_transform_0 {
 		compatible = "zmk,matrix-transform";
 		columns = <5>;
@@ -31,11 +20,5 @@
 			RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)
 			RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4)
 		>;
-	};
-};
-
-	layout0: physical_layout {
-		compatible = "zmk,physical-layout";
-		transform = <&default_transform>;
 	};
 };
